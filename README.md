@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+This file provides a complete guide for users to set up and run the frontend application along with integration details for the backend API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Shopping Cart Frontend
 
-## Available Scripts
+This repository contains the frontend for the Shopping Cart application built with React. It provides a user interface for browsing products, managing a shopping cart, and performing user authentication.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Product listing with "Add to Cart" functionality
+- User authentication via a login popup
+- Cart management (add, update, remove items)
+- Responsive design with a modern layout
+- Integration with the backend API
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- [Node.js](https://nodejs.org/en/download/) (v16 or later)
+- Backend API (refer to the [Shopping Cart Backend Repo](https://github.com/johnarman/shopping-cart-backend))
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/johnarman/shopping-cart-frontend.git
+   cd shopping-cart-frontend
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Configure the Backend API URL**:
+   In the `src/config.js` file, set the URL to point to your running backend API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Run the development server**:
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+   The application will run on `http://localhost:3000` by default.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Backend Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ensure that you have the backend API running. Follow the instructions in the [Shopping Cart Backend Repo](https://github.com/johnarman/shopping-cart-backend) to set up the backend.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Testing the Application
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Login Credentials**:
+   A default demo user is created in the backend:
+   - **Username**: `admin`
+   - **Password**: `admin123`
 
-## Learn More
+2. **Swagger for Backend API**:
+   The backend API has interactive documentation available through Swagger. You can access it at `http://localhost:5001/swagger` when the backend is running.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Project Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```plaintext
+src/
+├── components/        -> React components for the application
+├── context/           -> Context API for state management
+├── styles/            -> CSS and styling files
+├── App.js             -> Main app component
+├── index.js           -> Entry point
+```
 
-### Code Splitting
+### Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React**: Frontend library
+- **React Context API**: For managing global state (authentication, cart)
+- **Axios**: For making HTTP requests to the backend API
+- **React Router**: For handling client-side routing
+- **Toastify**: For showing notifications
