@@ -32,10 +32,7 @@ This repository contains the frontend for the Shopping Cart application built wi
    npm install
    ```
 
-3. **Configure the Backend API URL**:
-   In the `src/config.js` file, set the URL to point to your running backend API.
-
-4. **Run the development server**:
+3. **Run the development server**:
    ```bash
    npm start
    ```
@@ -53,8 +50,13 @@ Ensure that you have the backend API running. Follow the instructions in the [Sh
    - **Username**: `admin`
    - **Password**: `admin123`
 
+   OR
+
+   - **Username**: `testuser`
+   - **Password**: `test123`
+
 2. **Swagger for Backend API**:
-   The backend API has interactive documentation available through Swagger. You can access it at `http://localhost:5001/swagger` when the backend is running.
+   The backend API has interactive documentation available through Swagger. You can access it at - [Swagger UI](http://localhost:7109/swagger/index.html) when the backend is running.
 
 ### Project Structure
 
