@@ -16,7 +16,7 @@ const CartProvider = ({ children }) => {
 
     const fetchCart = async () => {
         try {
-            const response = await axios.get('/api/shoppingcart', {
+            const response = await axios.get('/shoppingcart', {
                 headers: { Authorization: `Bearer ${user.token}` }
             });
             setCart(response.data);
@@ -27,10 +27,10 @@ const CartProvider = ({ children }) => {
 
     const addCartItem = async (productId, quantity) => {
         try {
-            const response = await axios.post('/api/shoppingcart', { productId, quantity }, {
+            const response = await axios.post('/shoppingcart', { productId, quantity }, {
                 headers: { Authorization: `Bearer ${user.token}` }
             });
-            
+
             if (response.status !== 200) {
                 // Manually throw an error if the response status is not 200 (success)
                 throw new Error('Failed to add item to cart');
@@ -45,7 +45,7 @@ const CartProvider = ({ children }) => {
 
     const updateCartItem = async (productId, quantity) => {
         try {
-            await axios.put('/api/shoppingcart', { productId, quantity }, {
+            await axios.put('/shoppingcart', { productId, quantity }, {
                 headers: { Authorization: `Bearer ${user.token}` }
             });
             fetchCart();
@@ -56,7 +56,7 @@ const CartProvider = ({ children }) => {
 
     const removeCartItem = async (productId) => {
         try {
-            await axios.delete(`/api/shoppingcart/${productId}`, {
+            await axios.delete(`/shoppingcart/${productId}`, {
                 headers: { Authorization: `Bearer ${user.token}` }
             });
             fetchCart();

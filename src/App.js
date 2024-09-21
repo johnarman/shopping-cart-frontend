@@ -11,6 +11,11 @@ import Cart from './components/Cart/Cart';
 import { AuthProvider, AuthContext } from './context/AuthContext';
 import { CartProvider, CartContext } from './context/CartContext';
 import './App.css';
+import axios from 'axios';
+import config from './config';
+
+
+axios.defaults.baseURL = config.apiBaseUrl;
 
 const App = () => {
     return (

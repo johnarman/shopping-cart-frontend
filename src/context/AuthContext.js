@@ -22,7 +22,7 @@ const AuthProvider = ({ children }) => {
 
     const login = async (username, password) => {
         try {
-            const response = await axios.post('/api/auth/login', { username, password });
+            const response = await axios.post('/auth/login', { username, password });
             const { token } = response.data;
             const userData = { username, token };
             localStorage.setItem('user', JSON.stringify(userData));
